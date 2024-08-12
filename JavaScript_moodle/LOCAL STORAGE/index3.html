@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <h1 id="text"></h1>
+
+    <script>
+
+        let result={
+            name:"ram",
+            age:20,
+            password:9445373119
+        }
+        console.log(result)
+
+        let data=JSON.stringify(result)
+        console.log(data)
+
+        localStorage.setItem("value",data)
+
+        let item=localStorage.getItem("value")
+        let  item2=JSON.parse(item)
+
+        let headEl=document.getElementById("text")
+
+        
+        headEl.textContent=item2.password
+        
+    </script>
+    
+</body>
+</html>

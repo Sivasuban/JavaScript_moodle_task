@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let labelEl=document.createElement("label")
+        labelEl.textContent="First input value"
+        document.body.appendChild(labelEl)
+
+        let inputEl=document.createElement("input")
+        inputEl.setAttribute("id","text")
+        document.body.appendChild(inputEl)
+
+        let labelEl2=document.createElement("label")
+        labelEl2.textContent="Second input value"
+        document.body.appendChild(labelEl2)
+
+        let inputEl2=document.createElement("input")
+        inputEl2.setAttribute("id","text2")
+        document.body.appendChild(inputEl2)
+
+        let buttonEl=document.createElement("button")
+        buttonEl.setAttribute("onclick","change()")
+        buttonEl.textContent="Submit"
+        document.body.appendChild(buttonEl)
+
+        function change(){
+            let inputEl=parseFloat(document.getElementById("text").value)
+            let inputEl2=parseFloat(document.getElementById("text2").value)
+
+            let add=document.getElementById("add")
+            add.textContent="Addition of the Number ="+(inputEl+inputEl2)
+
+            let subtract=document.getElementById("sub")
+            subtract.textContent="Subtract of the Number ="+(inputEl-inputEl2)
+
+            let multiple=document.getElementById("mul")
+            multiple.textContent="Multiply of the Number ="+(inputEl*inputEl2)
+
+            let divisible=document.getElementById("div")
+            divisible.textContent="Divisible of the Number ="+(inputEl/inputEl2)
+
+            let modulus=document.getElementById("mod")
+            modulus.textContent="Modulus of the Number ="+(inputEl%inputEl2)
+        }
+
+    
+    </script>
+
+
+    <p id="add">hi</p>
+    <p id="sub">hello</p>
+    <p id="mul">hwr</p>
+    <p id="div">5n</p>
+    <p id="mod">u</p>
+</body>
+</html>

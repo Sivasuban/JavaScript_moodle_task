@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <script>
+        let paraEl = document.createElement("p")
+        paraEl.setAttribute("id", "para")
+        document.body.appendChild(paraEl)
+
+        let value = prompt("Enter the name;")
+
+        let value2 = function () {
+            for (i = 0; i < value.length; i++) {
+                let paraEl2 = document.getElementById("para")
+                paraEl2.textContent += value[i] + value[i]
+            }
+        }
+        value2()
+
+    </script>
+
+</body>
+
+</html>

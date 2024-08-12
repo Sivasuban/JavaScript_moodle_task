@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let inputEl1=document.createElement("input")
+        document.body.appendChild(inputEl1)
+
+        let inputEl2=document.createElement("input")
+        document.body.appendChild(inputEl2)
+
+        let buttonEl=document.createElement("button")
+        buttonEl.setAttribute("onclick","user()")
+        document.body.appendChild(buttonEl)
+        buttonEl.innerHTML="Submit"
+
+        function user(){
+            if(inputEl1.value=="" || inputEl2.value=="" ){
+                alert("One of your data is empty, kindly fill it and try again")
+            }
+            else{
+                alert("All are Done")
+            }
+        }
+
+    </script>
+</body>
+</html>

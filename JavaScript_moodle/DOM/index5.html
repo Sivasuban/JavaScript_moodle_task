@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let inputEl=document.createElement("input")
+        inputEl.setAttribute("id","text")
+        document.body.appendChild(inputEl)
+
+        let buttonEl=document.createElement("button")
+        buttonEl.setAttribute("onclick","user()")
+        buttonEl.textContent="Submit"
+        document.body.appendChild(buttonEl)
+
+        function user(){
+            let inputEl=document.getElementById("text")
+            let ab=inputEl.value
+            alert(ab)
+ 
+        }
+    </script>
+</body>
+</html>

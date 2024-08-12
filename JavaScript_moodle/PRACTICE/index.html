@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .top{
+            margin-top: 20px;
+            display: none; 
+        }
+        .center{
+            text-align: center;
+        }
+        #btn{
+            background: linear-gradient(to left, blue, lightblue);  
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td><label for="text">Name </label></td>
+                <td>: <input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="text">Email </label></td>
+                <td>: <input type="text" id="mail"></td>
+            </tr>
+            <tr>
+                <td><label for="text">Mobile Number </label></td>
+                <td>: <input type="text" id="num"></td>
+            </tr>
+            <tr>
+                <td><label for="text">Address </Address></label></td>
+                <td>: <textarea name="text" id="add" cols="30" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="text">Date </label></td>
+                <td>: <input type="date" id="date1"></td>
+            </tr>
+            <tr>
+                <td>Gender </td>
+                <td>: 
+                <select name="" id="gene">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Other</option>
+                </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div class="center">
+            <input type="button" id="btn" onclick="change()" value="submit">
+        </div>
+        <br>
+    </form>
+    <form class="top" id="resultForm"> 
+        <table>
+            <tr>
+                <td>Name </td><td>:</td>
+                <td><p id="para"></p></td>
+            </tr>
+            <tr>
+                <td>Email </td><td>:</td>
+                <td><p id="para1"></p></td>
+            </tr>
+            <tr>
+                <td>Mobile Number </td><td>:</td>
+                <td><p id="para2"></p></td>
+            </tr>
+            <tr>
+                <td>Address </td><td>:</td>
+                <td><p id="para3"></p></td>
+            </tr>
+            <tr>
+                <td>Date </td><td>:</td>
+                <td><p id="date"></p></td>
+            </tr>
+            <tr>
+                <td>Gender </td><td>:</td>
+                <td><p id="gen"></p></td>
+            </tr>        
+        </table>
+    </form>
+    <script src="./index.js"></script>
+</body>
+</html>

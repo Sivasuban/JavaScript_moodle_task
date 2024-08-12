@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name :</label>
+        <input type="text" id="name" required><br>
+
+        <label for="dob">Date of Birth :</label>
+        <input type="date" id="date" required><br>
+
+        <input type="button" value="create password" onclick="change()"><br>
+
+        <label for="password">password</label>
+        <input type="text" id="password" readonly>
+
+    </form>
+
+    <script>
+        function change(){
+            let name1=document.getElementById("name").value;
+            let date1=document.getElementById("date").value;
+            let password1=document.getElementById("password");
+            password1.value=(name1.slice(0,4))+(date1.split("-").join(""))
+        }
+    </script>
+    
+</body>
+</html>

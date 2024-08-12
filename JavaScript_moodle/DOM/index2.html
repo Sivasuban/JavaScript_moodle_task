@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="head"></h1>
+    <script>
+        let headEl = document.getElementById("head")
+        headEl.innerHTML = "ADD TO CART"
+
+        let inputEl = document.createElement("input")
+        inputEl.setAttribute("id", "text")
+        document.body.appendChild(inputEl)
+
+        let buttonEl = document.createElement("button")
+        buttonEl.setAttribute("id", "btn")
+        buttonEl.setAttribute("onclick", "change()")
+        buttonEl.textContent = "Add"
+        document.body.appendChild(buttonEl)
+
+
+        let text2 = document.createElement("h3")
+        text2.innerHTML = "My Cart Items"
+        document.body.appendChild(text2)
+
+        let unEl = document.createElement("ul")
+        document.body.appendChild(unEl)
+
+        function change() {
+            var textEl = document.getElementById("text")
+            var ab = inputEl.value
+
+
+            var list = document.createElement("li")
+            list.style.listStyleType = "disc"
+
+            unEl.appendChild(list)
+
+            for (i = 0; i < ab.length; i++) {
+                list.textContent = ab
+                textEl.value = ""
+            }
+        }
+    </script>
+</body>
+
+</html>

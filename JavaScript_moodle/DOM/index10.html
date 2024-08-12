@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let labelEl=document.createElement("label")
+        labelEl.textContent="User name id"
+        document.body.appendChild(labelEl)
+
+        let inputEl=document.createElement("input")
+        inputEl.setAttribute("id","number")
+        document.body.appendChild(inputEl)
+
+        let buttonEl=document.createElement("button")
+        buttonEl.textContent="Submit"
+        buttonEl.setAttribute("onclick","change()")
+        document.body.appendChild(buttonEl)
+
+        let headEl=document.createElement("h1")
+        headEl.textContent="value"
+        document.body.appendChild(headEl)
+
+        let selectEl=document.createElement("select")
+        selectEl.textContent="selected"
+        selectEl.setAttribute("id","select")
+        document.body.appendChild(selectEl)
+
+        let buttonEl2=document.createElement("button")
+        buttonEl2.setAttribute("onclick","user()")
+        document.body.appendChild(buttonEl2)
+        buttonEl2.innerHTML="views"
+
+        function change(){
+            let inputEl=document.getElementById("number")
+            let ab=inputEl.value
+
+            let selected=document.getElementById("select")
+            let optionEl=document.createElement("option")
+
+            selected.appendChild(optionEl)
+            optionEl.textContent=ab
+            inputEl.value=""
+
+        }
+
+        function user(){
+            let selected=document.getElementById("select")
+            let para1=document.getElementById("para")
+            para1.textContent=selected.value
+        }
+
+
+    </script>
+
+    <p id="para"></p>
+</body>
+</html>

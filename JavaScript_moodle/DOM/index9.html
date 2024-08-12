@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let labelEl=document.createElement("label")
+        document.body.appendChild(labelEl)
+        labelEl.textContent="user Name Id"
+
+        let inputEl=document.createElement("input")
+        inputEl.setAttribute("id","number")
+        document.body.appendChild(inputEl)
+
+        let buttonEl=document.createElement("button")
+        buttonEl.setAttribute("onclick","change()")
+        buttonEl.textContent="Submit"
+        document.body.appendChild(buttonEl)
+
+        let headEl=document.createElement("h1")
+        headEl.textContent="value"
+        document.body.appendChild(headEl)
+
+        let selectEl=document.createElement("select")
+        selectEl.textContent="selected"
+        selectEl.setAttribute("id","select")
+        document.body.appendChild(selectEl)
+
+        function change(){
+            let inputEl=document.getElementById("number")
+            let ab=inputEl.value
+
+            let selected=document.getElementById("select")
+            let optionEl=document.createElement("option")
+
+            selected.appendChild(optionEl)
+            optionEl.textContent=ab;
+            inputEl.value=""
+        }
+    </script>
+</body>
+</html>

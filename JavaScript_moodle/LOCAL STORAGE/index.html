@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    
+</head>
+<body>
+    <h1 id="text"></h1>
+
+    
+    <script>
+        let value={
+            name:"Sivasuban",
+            dob:2001,
+            age:21,
+            course:"Web Development",
+            
+        }
+        console.log(value)
+
+        let jsonStringify=JSON.stringify(value)
+        console.log(jsonStringify)
+
+        localStorage.setItem("file",jsonStringify)
+         let  ab=localStorage.getItem("file")
+         let give=JSON.parse(ab)
+         console.log(ab)
+   
+
+        let headEl=document.getElementById("text")
+
+      headEl.textContent=give.name + " " + give.course + " " + give.dob
+
+      
+
+        
+
+        
+    </script>
+</body>
+</html>
